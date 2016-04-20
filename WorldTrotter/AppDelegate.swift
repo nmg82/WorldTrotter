@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  WorldTrotter
-//
-//  Created by Nathan Gladson on 4/20/16.
-//  Copyright © 2016 nmg82. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
