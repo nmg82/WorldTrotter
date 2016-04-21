@@ -26,6 +26,20 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     return nf
   }()
   
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    let currentDate = NSDate()
+    let calendar = NSCalendar.currentCalendar()
+    let hour = calendar.component(.Hour, fromDate: currentDate)
+    
+    if hour > 12 {
+      view.backgroundColor = UIColor.darkGrayColor()
+    } else {
+      view.backgroundColor = UIColor.lightGrayColor()
+    }
+  }
+  
   @IBAction func fahrenheitFieldEditingChanged(textField: UITextField) {
     guard let text = textField.text, value = Double(text) else {
       fahrenheitValue = nil
