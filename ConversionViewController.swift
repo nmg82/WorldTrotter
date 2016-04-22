@@ -41,12 +41,12 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
   }
   
   @IBAction func fahrenheitFieldEditingChanged(textField: UITextField) {
-    guard let text = textField.text, value = Double(text) else {
+    guard let text = textField.text, number = numberFormatter.numberFromString(text) else {
       fahrenheitValue = nil
       return
     }
     
-    fahrenheitValue = value
+    fahrenheitValue = number.doubleValue
   }
   
   @IBAction func dismissKeyboard(sender: AnyObject) {
@@ -63,12 +63,16 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
   }
   
   func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    
+    let currentLocale = NSLocale.currentLocale()
+    let decimalSeparator = currentLocale.objectForKey(NSLocaleDecimalSeparator) as! String
+    
     let currentTextHasDecimal = {
-        textField.text?.rangeOfString(".") != nil
+        textField.text?.rangeOfString(decimalSeparator) != nil
     }()
     
     let replacementTextHasDecimal = {
-      string.rangeOfString(".") != nil
+      string.rangeOfString(decimalSeparator) != nil
     }()
     
     let isDecimalOk = !(currentTextHasDecimal && replacementTextHasDecimal)

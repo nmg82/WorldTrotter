@@ -10,7 +10,11 @@ class MapViewController: UIViewController {
   private var locationIndex: Int!
   
   private lazy var segmentedControl: UISegmentedControl = {
-    let segmentedControl = UISegmentedControl(items: ["Standard", "Hybrid", "Satellite"])
+    let standard = NSLocalizedString("Standard", comment: "Standard map view")
+    let hybrid = NSLocalizedString("Hybrid", comment: "Hybrid map view")
+    let satellite = NSLocalizedString("Satellite", comment: "Satellite map view")
+    
+    let segmentedControl = UISegmentedControl(items: [standard, hybrid, satellite])
     segmentedControl.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
     segmentedControl.selectedSegmentIndex = 0
     segmentedControl.addTarget(self, action: #selector(MapViewController.mapTypeChanged(_:)), forControlEvents: .ValueChanged)
@@ -19,7 +23,8 @@ class MapViewController: UIViewController {
   
   private lazy var locationButton: UIButton = {
     let locationButton = UIButton()
-    locationButton.setTitle("Current Location", forState: .Normal)
+    let title = NSLocalizedString("Current Location", comment: "Current location button")
+    locationButton.setTitle(title, forState: .Normal)
     locationButton.contentEdgeInsets = UIEdgeInsetsMake(5, 5, 5, 5)
     locationButton.backgroundColor = UIColor.blueColor()
     locationButton.addTarget(self, action: #selector(MapViewController.findLocation), forControlEvents: .TouchUpInside)
@@ -28,7 +33,8 @@ class MapViewController: UIViewController {
   
   private lazy var cycleButton: UIButton = {
     let cycleButton = UIButton()
-    cycleButton.setTitle("Cycle Locations", forState: .Normal)
+    let title = NSLocalizedString("Cycle Locations", comment: "Cycle locations button")
+    cycleButton.setTitle(title, forState: .Normal)
     cycleButton.contentEdgeInsets = UIEdgeInsetsMake(5, 5, 5, 5)
     cycleButton.backgroundColor = UIColor.blueColor()
     cycleButton.addTarget(self, action: #selector(MapViewController.cycleLocations), forControlEvents: .TouchUpInside)
