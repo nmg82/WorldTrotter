@@ -13,6 +13,8 @@
 		1E2E57091CC82FA400DB042D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E2E57071CC82FA400DB042D /* LaunchScreen.storyboard */; };
 		1EB803161CC947640071D00E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EB803151CC947640071D00E /* MapKit.framework */; };
 		1EB803181CC94B480071D00E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB803171CC94B480071D00E /* MapViewController.swift */; };
+		1EB8031A1CC9646C0071D00E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EB803191CC9646C0071D00E /* WebKit.framework */; };
+		1EB8031C1CC965960071D00E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB8031B1CC965960071D00E /* WebViewController.swift */; };
 		DB78617C1CC86F870063430C /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB78617B1CC86F870063430C /* ConversionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		1E2E570A1CC82FA400DB042D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1EB803151CC947640071D00E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1EB803171CC94B480071D00E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1EB803191CC9646C0071D00E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		1EB8031B1CC965960071D00E /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		DB78617B1CC86F870063430C /* ConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConversionViewController.swift; path = ../ConversionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EB8031A1CC9646C0071D00E /* WebKit.framework in Frameworks */,
 				1EB803161CC947640071D00E /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,6 +48,7 @@
 		1E2E56F21CC82FA400DB042D = {
 			isa = PBXGroup;
 			children = (
+				1EB803191CC9646C0071D00E /* WebKit.framework */,
 				1EB803151CC947640071D00E /* MapKit.framework */,
 				1E2E56FD1CC82FA400DB042D /* WorldTrotter */,
 				1E2E56FC1CC82FA400DB042D /* Products */,
@@ -63,6 +69,7 @@
 				1E2E56FE1CC82FA400DB042D /* AppDelegate.swift */,
 				DB78617B1CC86F870063430C /* ConversionViewController.swift */,
 				1EB803171CC94B480071D00E /* MapViewController.swift */,
+				1EB8031B1CC965960071D00E /* WebViewController.swift */,
 				1E2E57021CC82FA400DB042D /* Main.storyboard */,
 				1E2E57051CC82FA400DB042D /* Assets.xcassets */,
 				1E2E57071CC82FA400DB042D /* LaunchScreen.storyboard */,
@@ -145,6 +152,7 @@
 				DB78617C1CC86F870063430C /* ConversionViewController.swift in Sources */,
 				1EB803181CC94B480071D00E /* MapViewController.swift in Sources */,
 				1E2E56FF1CC82FA400DB042D /* AppDelegate.swift in Sources */,
+				1EB8031C1CC965960071D00E /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
